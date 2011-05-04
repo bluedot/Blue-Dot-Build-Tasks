@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B15982F4-802D-4304-A692-1BB0185AD69F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BlueDot.MsBuild.Tasks</RootNamespace>
+    <AssemblyName>BlueDot.MsBuild.Tasks</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.1.271, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Library\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.Build.Utilities.v3.5">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DatabaseCreateResult.cs" />
+    <Compile Include="DeployApplication.cs" />
+    <Compile Include="DeployDatabase.cs" />
+    <Compile Include="DeployPackage.cs" />
+    <Compile Include="MsiReader\MsiInfo.cs" />
+    <Compile Include="NewGuid.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\MCore72DeviceGroup\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MCore72Application\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MCoreDeviceGroup\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MCorePackage\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="MsiReader\SimpleMsiReader.cs" />
+    <Compile Include="SqlConnectionString.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Service References\MCorePackage\PackageDesign.wsdl" />
+    <None Include="Service References\MCorePackage\PackageDesign.xsd" />
+    <None Include="Service References\MCorePackage\PackageDesign1.xsd" />
+    <None Include="Service References\MCorePackage\PackageDesign2.xsd" />
+    <None Include="Service References\MCorePackage\PackageDesign3.xsd" />
+    <None Include="Service References\MCorePackage\PackageDesign4.xsd" />
+    <None Include="Service References\MCorePackage\PackageDesign5.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\MCore72DeviceGroup\" />
+    <WCFMetadataStorage Include="Service References\MCore72Application\" />
+    <WCFMetadataStorage Include="Service References\MCoreDeviceGroup\" />
+    <WCFMetadataStorage Include="Service References\MCorePackage\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MCorePackage\PackageDesign.disco" />
+    <None Include="Service References\MCorePackage\PackageDesign1.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MCorePackage\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MCoreDeviceGroup\DeviceGroupManagement.xsd" />
+    <None Include="Service References\MCoreDeviceGroup\DeviceGroupManagement1.xsd" />
+    <None Include="Service References\MCoreDeviceGroup\DeviceGroupManagement2.xsd" />
+    <None Include="Service References\MCoreDeviceGroup\DeviceGroupManagement3.xsd" />
+    <None Include="Service References\MCoreDeviceGroup\DeviceGroupManagement4.xsd" />
+    <None Include="Service References\MCoreDeviceGroup\DeviceGroupManagement5.xsd" />
+    <None Include="Service References\MCoreDeviceGroup\DeviceGroupManagement6.xsd" />
+    <None Include="Service References\MCorePackage\BlueDot.MsBuild.Tasks.MCorePackage.DeploymentPackageMetadata.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MCorePackage\BlueDot.MsBuild.Tasks.MCorePackage.DeviceHandlerModule.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MCorePackage\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MCoreDeviceGroup\DeviceGroupManagement.disco" />
+    <None Include="Service References\MCoreDeviceGroup\DeviceGroupManagement.wsdl" />
+    <None Include="Service References\MCoreDeviceGroup\DeviceGroupManagement1.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MCoreDeviceGroup\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MCoreDeviceGroup\BlueDot.MsBuild.Tasks.MCoreDeviceGroup.DeploymentPackage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MCoreDeviceGroup\BlueDot.MsBuild.Tasks.MCoreDeviceGroup.DeviceGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MCoreDeviceGroup\BlueDot.MsBuild.Tasks.MCoreDeviceGroup.DeviceGroupDeploymentPackage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MCoreDeviceGroup\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MCore72Application\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MCore72Application\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MCore72DeviceGroup\DeviceGroupManagement.wsdl" />
+    <None Include="Service References\MCore72DeviceGroup\DeviceGroupManagement.xsd" />
+    <None Include="Service References\MCore72DeviceGroup\DeviceGroupManagement1.xsd" />
+    <None Include="Service References\MCore72DeviceGroup\DeviceGroupManagement2.xsd" />
+    <None Include="Service References\MCore72Application\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MCore72DeviceGroup\DeviceGroupManagement.disco" />
+    <None Include="Service References\MCore72DeviceGroup\DeviceGroupManagement1.wsdl" />
+    <None Include="Service References\MCore72DeviceGroup\DeviceGroupManagement3.xsd" />
+    <None Include="Service References\MCore72DeviceGroup\DeviceGroupManagement4.xsd" />
+    <None Include="Service References\MCore72DeviceGroup\DeviceGroupManagement5.xsd" />
+    <None Include="Service References\MCore72DeviceGroup\DeviceGroupManagement6.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MCore72DeviceGroup\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MCore72DeviceGroup\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MCore72Application\BlueDot.MsBuild.Tasks.MCore72Application.Application.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MCore72Application\BlueDot.MsBuild.Tasks.MCore72Application.ApplicationFolder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MCore72Application\BlueDot.MsBuild.Tasks.MCore72Application.ApplicationSmartFolder.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MCore72Application\BlueDot.MsBuild.Tasks.MCore72Application.InstallHeader.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MCore72DeviceGroup\BlueDot.MsBuild.Tasks.MCore72DeviceGroup.DeviceGroup.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MCore72DeviceGroup\BlueDot.MsBuild.Tasks.MCore72DeviceGroup.DeviceGroupApplication.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\MCore72DeviceGroup\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WindowsInstaller">
+      <Guid>{000C1092-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>1033</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MCore72Application\ApplicationManagement2.wsdl" />
+    <None Include="Service References\MCore72Application\ApplicationManagement21.wsdl" />
+    <None Include="Service References\MCore72Application\ApplicationManagement5.xsd" />
+    <None Include="Service References\MCore72Application\ApplicationManagement51.xsd" />
+    <None Include="Service References\MCore72Application\ApplicationManagement52.xsd" />
+    <None Include="Service References\MCorePackage\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MCore72Application\ApplicationManagement1.disco" />
+    <None Include="Service References\MCore72Application\ApplicationManagement53.xsd" />
+    <None Include="Service References\MCore72Application\ApplicationManagement54.xsd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

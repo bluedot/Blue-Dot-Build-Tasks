@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://BlueDot.Mnow.Server.DataContracts/2007/01" elementFormDefault="qualified" targetNamespace="http://BlueDot.Mnow.Server.DataContracts/2007/01" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/DeviceGroupManagement.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="DeviceGroupAddition">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DeviceGroupBase">
+        <xs:sequence>
+          <xs:element name="CreatedByUser" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeviceGroupAddition" nillable="true" type="tns:DeviceGroupAddition" />
+  <xs:complexType name="DeviceGroupBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeviceSettings" nillable="true" type="xs:string" />
+      <xs:element name="ParentId" nillable="true" type="xs:int" />
+      <xs:element name="Name" nillable="true" type="xs:string" />
+      <xs:element name="Notes" nillable="true" type="xs:string" />
+      <xs:element name="TimeZoneId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeviceGroupBase" nillable="true" type="tns:DeviceGroupBase" />
+  <xs:complexType name="ArrayOfDeploymentPackage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DeploymentPackage" nillable="true" type="tns:DeploymentPackage" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDeploymentPackage" nillable="true" type="tns:ArrayOfDeploymentPackage" />
+  <xs:complexType name="DeploymentPackage">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:int" />
+      <xs:element name="Name" nillable="true" type="xs:string" />
+      <xs:element name="Type" nillable="true" type="xs:string" />
+      <xs:element name="Version" nillable="true" type="xs:string" />
+      <xs:element name="CreatedWhen" type="xs:dateTime" />
+      <xs:element name="CreatedBy" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="DependencyList" nillable="true" type="q1:ArrayOfint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeploymentPackage" nillable="true" type="tns:DeploymentPackage" />
+  <xs:complexType name="ArrayOfDeviceGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DeviceGroup" nillable="true" type="tns:DeviceGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDeviceGroup" nillable="true" type="tns:ArrayOfDeviceGroup" />
+  <xs:complexType name="DeviceGroup">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DeviceGroupBase">
+        <xs:sequence>
+          <xs:element name="Id" type="xs:int" />
+          <xs:element name="LastUpdatedByUser" nillable="true" type="xs:string" />
+          <xs:element name="CreatedWhen" type="xs:dateTime" />
+          <xs:element name="LastUpdatedWhen" type="xs:dateTime" />
+          <xs:element name="CreatedByUser" nillable="true" type="xs:string" />
+          <xs:element name="RowVersion" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeviceGroup" nillable="true" type="tns:DeviceGroup" />
+  <xs:complexType name="DeviceGroupUpdate">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DeviceGroupBase">
+        <xs:sequence>
+          <xs:element name="Id" type="xs:int" />
+          <xs:element name="LastUpdatedByUser" nillable="true" type="xs:string" />
+          <xs:element name="RowVersion" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeviceGroupUpdate" nillable="true" type="tns:DeviceGroupUpdate" />
+</xs:schema>

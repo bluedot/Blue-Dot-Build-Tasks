@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="255487b8-2d33-47ae-9c50-392b3969bae6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/mnowcommunicationservice/devicegroupmanagement.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DeviceGroupManagement.xsd" MetadataType="Schema" ID="eb4b3cd6-31a7-4b60-a479-a89468d64a12" SourceId="1" SourceUrl="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc?xsd=xsd3" />
+    <MetadataFile FileName="DeviceGroupManagement.wsdl" MetadataType="Wsdl" ID="db265f93-3fc6-44e8-8456-b4cda999f8fe" SourceId="1" SourceUrl="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc?wsdl" />
+    <MetadataFile FileName="DeviceGroupManagement1.xsd" MetadataType="Schema" ID="172198d4-2847-4546-bbf9-8d55e39ae068" SourceId="1" SourceUrl="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc?xsd=xsd4" />
+    <MetadataFile FileName="DeviceGroupManagement2.xsd" MetadataType="Schema" ID="aa029ae8-fe2a-4325-b279-b65045859056" SourceId="1" SourceUrl="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc?xsd=xsd1" />
+    <MetadataFile FileName="DeviceGroupManagement.disco" MetadataType="Disco" ID="8031d57e-4a11-4e95-952e-d2a3c7621808" SourceId="1" SourceUrl="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc?disco" />
+    <MetadataFile FileName="DeviceGroupManagement1.wsdl" MetadataType="Wsdl" ID="d8b849ca-a3b4-4f55-a9f2-17f57abef895" SourceId="1" SourceUrl="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="DeviceGroupManagement3.xsd" MetadataType="Schema" ID="e133467d-7689-4d61-8c8e-778dd12d1daf" SourceId="1" SourceUrl="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc?xsd=xsd0" />
+    <MetadataFile FileName="DeviceGroupManagement4.xsd" MetadataType="Schema" ID="a6336075-1091-4675-9b8a-c49c9c0ba45e" SourceId="1" SourceUrl="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc?xsd=xsd5" />
+    <MetadataFile FileName="DeviceGroupManagement5.xsd" MetadataType="Schema" ID="668b690f-063b-4ad6-acdd-a86150a14214" SourceId="1" SourceUrl="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc?xsd=xsd2" />
+    <MetadataFile FileName="DeviceGroupManagement6.xsd" MetadataType="Schema" ID="a50b154a-6c24-49b0-b178-d89efeba36f8" SourceId="1" SourceUrl="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc?xsd=xsd6" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

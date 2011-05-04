@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Server.FaultContracts/2007/01" elementFormDefault="qualified" targetNamespace="http://Server.FaultContracts/2007/01" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc?xsd=xsd3" namespace="http://FaultContracts/Default/DefaultFaultContract" />
+  <xs:complexType name="GroupAlreadyExists">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://FaultContracts/Default/DefaultFaultContract" base="q1:DefaultFaultContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="GroupName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GroupAlreadyExists" nillable="true" type="tns:GroupAlreadyExists" />
+  <xs:complexType name="GroupDoesNotExist">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://FaultContracts/Default/DefaultFaultContract" base="q2:DefaultFaultContract">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="GroupDoesNotExist" nillable="true" type="tns:GroupDoesNotExist" />
+</xs:schema>

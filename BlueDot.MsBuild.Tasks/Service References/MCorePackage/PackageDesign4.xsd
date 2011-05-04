@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://BlueDotSolutions.MobileFramework.Server.PackageDesign.DataContracts/2007/01" elementFormDefault="qualified" targetNamespace="http://BlueDotSolutions.MobileFramework.Server.PackageDesign.DataContracts/2007/01" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfDeviceHandlerModule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DeviceHandlerModule" nillable="true" type="tns:DeviceHandlerModule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDeviceHandlerModule" nillable="true" type="tns:ArrayOfDeviceHandlerModule" />
+  <xs:complexType name="DeviceHandlerModule">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:int" />
+      <xs:element name="ModuleDeploymentPackageId" nillable="true" type="xs:int" />
+      <xs:element name="HandlerName" nillable="true" type="xs:string" />
+      <xs:element name="Description" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeviceHandlerModule" nillable="true" type="tns:DeviceHandlerModule" />
+  <xs:complexType name="DeviceHandlerModuleAddition">
+    <xs:sequence>
+      <xs:element name="HandlerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element name="ModuleDeploymentPackageId" type="xs:int" />
+      <xs:element name="CreatedBy" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeviceHandlerModuleAddition" nillable="true" type="tns:DeviceHandlerModuleAddition" />
+</xs:schema>

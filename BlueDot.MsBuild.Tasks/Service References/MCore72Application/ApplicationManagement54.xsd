@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://BlueDot.Mnow.Server.DataContracts/2007/01" elementFormDefault="qualified" targetNamespace="http://BlueDot.Mnow.Server.DataContracts/2007/01" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="NewApplication">
+    <xs:sequence>
+      <xs:element name="ApplicationFolderId" type="xs:int" />
+      <xs:element name="ApplicationFormalName" nillable="true" type="xs:string" />
+      <xs:element name="CreatedByUserName" nillable="true" type="xs:string" />
+      <xs:element name="CustomDeviceHandlerModuleId" type="xs:int" />
+      <xs:element minOccurs="0" name="ProductCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NewApplication" nillable="true" type="tns:NewApplication" />
+  <xs:complexType name="Application">
+    <xs:sequence>
+      <xs:element name="ApplicationFolderId" type="xs:int" />
+      <xs:element name="ApplicationFormalName" nillable="true" type="xs:string" />
+      <xs:element name="ApplicationId" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedByUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedWhen" type="xs:dateTime" />
+      <xs:element name="CustomDeviceHandlerModuleId" type="xs:int" />
+      <xs:element name="LastUpdatedByUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastUpdatedWhen" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NoRemoveFromDevice" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ProductCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Application" nillable="true" type="tns:Application" />
+  <xs:complexType name="NewApplicationFolder">
+    <xs:sequence>
+      <xs:element name="CreatedByUserName" nillable="true" type="xs:string" />
+      <xs:element name="FolderName" nillable="true" type="xs:string" />
+      <xs:element name="ParentApplicationFolderId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NewApplicationFolder" nillable="true" type="tns:NewApplicationFolder" />
+  <xs:complexType name="ApplicationFolder">
+    <xs:sequence>
+      <xs:element name="ApplicationFolderId" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedByUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedWhen" type="xs:dateTime" />
+      <xs:element name="FolderName" nillable="true" type="xs:string" />
+      <xs:element name="LastUpdatedByUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastUpdatedWhen" type="xs:dateTime" />
+      <xs:element name="ParentApplicationFolderId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApplicationFolder" nillable="true" type="tns:ApplicationFolder" />
+  <xs:complexType name="NewInstall">
+    <xs:sequence>
+      <xs:element name="ApplicationId" type="xs:int" />
+      <xs:element name="CreatedByUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstallCommandLine" nillable="true" type="xs:string" />
+      <xs:element name="InstallFileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShouldRemovePreviousVersion" type="xs:boolean" />
+      <xs:element name="Version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NewInstall" nillable="true" type="tns:NewInstall" />
+  <xs:complexType name="InstallHeader">
+    <xs:sequence>
+      <xs:element name="ApplicationId" type="xs:int" />
+      <xs:element name="CreatedByUserName" nillable="true" type="xs:string" />
+      <xs:element name="CreatedWhen" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InstallCommandLine" nillable="true" type="xs:string" />
+      <xs:element name="InstallFileName" nillable="true" type="xs:string" />
+      <xs:element name="InstallId" type="xs:int" />
+      <xs:element name="IsActiveInstall" type="xs:boolean" />
+      <xs:element name="LastUpdatedByUserName" nillable="true" type="xs:string" />
+      <xs:element name="LastUpdatedWhen" type="xs:dateTime" />
+      <xs:element name="OriginatedOnDevice" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RemovedWhen" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ShouldRemovePreviousVersion" type="xs:boolean" />
+      <xs:element name="Version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InstallHeader" nillable="true" type="tns:InstallHeader" />
+  <xs:complexType name="NewApplicationSmartFolder">
+    <xs:sequence>
+      <xs:element name="CreatedByUserName" nillable="true" type="xs:string" />
+      <xs:element name="FilterString" nillable="true" type="xs:string" />
+      <xs:element name="FolderName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NewApplicationSmartFolder" nillable="true" type="tns:NewApplicationSmartFolder" />
+  <xs:complexType name="ApplicationSmartFolder">
+    <xs:sequence>
+      <xs:element name="ApplicationSmartFolderId" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedByUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedWhen" type="xs:dateTime" />
+      <xs:element name="FilterString" nillable="true" type="xs:string" />
+      <xs:element name="FolderName" nillable="true" type="xs:string" />
+      <xs:element name="LastUpdatedByUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastUpdatedWhen" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ApplicationSmartFolder" nillable="true" type="tns:ApplicationSmartFolder" />
+  <xs:complexType name="ArrayOfApplicationSmartFolder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ApplicationSmartFolder" nillable="true" type="tns:ApplicationSmartFolder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfApplicationSmartFolder" nillable="true" type="tns:ArrayOfApplicationSmartFolder" />
+  <xs:complexType name="ArrayOfApplicationFolder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ApplicationFolder" nillable="true" type="tns:ApplicationFolder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfApplicationFolder" nillable="true" type="tns:ArrayOfApplicationFolder" />
+  <xs:complexType name="ArrayOfApplication">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Application" nillable="true" type="tns:Application" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfApplication" nillable="true" type="tns:ArrayOfApplication" />
+  <xs:complexType name="ArrayOfInstallHeader">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InstallHeader" nillable="true" type="tns:InstallHeader" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInstallHeader" nillable="true" type="tns:ArrayOfInstallHeader" />
+  <xs:complexType name="UpdateDeviceOriginatedInstall">
+    <xs:sequence>
+      <xs:element name="ApplicationId" type="xs:int" />
+      <xs:element minOccurs="0" name="InstallCommandLine" nillable="true" type="xs:string" />
+      <xs:element name="InstallFileName" nillable="true" type="xs:string" />
+      <xs:element name="InstallId" type="xs:int" />
+      <xs:element name="LastUpdatedByUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShouldRemovePreviousVersion" type="xs:boolean" />
+      <xs:element name="Version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateDeviceOriginatedInstall" nillable="true" type="tns:UpdateDeviceOriginatedInstall" />
+  <xs:complexType name="UpdateInstall">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="InstallCommandLine" nillable="true" type="xs:string" />
+      <xs:element name="InstallId" type="xs:int" />
+      <xs:element name="LastUpdatedByUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShouldRemovePreviousVersion" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UpdateInstall" nillable="true" type="tns:UpdateInstall" />
+</xs:schema>

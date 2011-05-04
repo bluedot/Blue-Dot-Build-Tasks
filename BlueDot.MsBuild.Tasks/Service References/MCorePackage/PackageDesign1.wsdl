@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:i0="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IPackageDesign_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01" location="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc?wsdl" />
+  <wsdl:types />
+  <wsdl:binding name="WSHttpBinding_IPackageDesign" type="i0:IPackageDesign">
+    <wsp:PolicyReference URI="#WSHttpBinding_IPackageDesign_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPackageList">
+      <soap12:operation soapAction="GetPackageList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetPackageListResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPackageContent">
+      <soap12:operation soapAction="GetPackageContent" style="document" />
+      <wsdl:input name="GetPackageContentRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetPackageContentResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddPackage">
+      <soap12:operation soapAction="AddPackage" style="document" />
+      <wsdl:input name="AddPackageRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AddPackageResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceHandlers">
+      <soap12:operation soapAction="GetDeviceHandlers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetDeviceHandlerModulesResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RemovePackage">
+      <soap12:operation soapAction="RemovePackage" style="document" />
+      <wsdl:input name="RemovePackageRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddDependencies">
+      <soap12:operation soapAction="AddDependencies" style="document" />
+      <wsdl:input name="AddDependenciesRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDependencies">
+      <soap12:operation soapAction="GetDependencies" style="document" />
+      <wsdl:input name="GetDependenciesRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetDependenciesResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveDependency">
+      <soap12:operation soapAction="RemoveDependency" style="document" />
+      <wsdl:input name="RemoveDependencyRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RegisterDeviceHandler">
+      <soap12:operation soapAction="RegisterDeviceHandler" style="document" />
+      <wsdl:input name="RegisterDeviceHandlerRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="RegisterDeviceHandlerResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+</wsdl:definitions>

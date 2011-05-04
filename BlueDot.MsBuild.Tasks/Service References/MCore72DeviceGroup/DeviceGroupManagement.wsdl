@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:i0="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://BlueDot.Mnow.Server.ServiceContracts/2007/01" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="DeviceGroupManagement" targetNamespace="http://BlueDot.Mnow.Server.ServiceContracts/2007/01" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/Imports">
+      <xsd:import schemaLocation="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc?xsd=xsd0" namespace="http://BlueDot.Mnow.Server.ServiceContracts/2007/01" />
+      <xsd:import schemaLocation="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc?xsd=xsd3" namespace="http://FaultContracts/Default/DefaultFaultContract" />
+      <xsd:import schemaLocation="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc?xsd=xsd2" namespace="http://BlueDot.Mnow.Server.DataContracts/2007/01" />
+      <xsd:import schemaLocation="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/BlueDot.Server.Client.Wcf.DataContracts" />
+      <xsd:import schemaLocation="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc?xsd=xsd6" namespace="http://Server.FaultContracts/2007/01" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateInstallForGroupApplicationRequest">
+    <wsdl:part name="parameters" element="tns:UpdateInstallForGroupApplicationRequest" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceGroupManagement_UpdateInstallForGroupApplication_OutputMessage" />
+  <wsdl:message name="IDeviceGroupManagement_UpdateInstallForGroupApplication_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q1:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="AssociateApplicationsRequest">
+    <wsdl:part name="parameters" element="tns:AssociateApplicationsRequest" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceGroupManagement_AssociateApplications_OutputMessage" />
+  <wsdl:message name="IDeviceGroupManagement_AssociateApplications_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q2:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationsAssociatedToGroupRequest">
+    <wsdl:part name="parameters" element="tns:GetApplicationsAssociatedToGroupRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationsAssociatedToGroupResponse">
+    <wsdl:part name="parameters" element="tns:GetApplicationsAssociatedToGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceGroupManagement_GetApplicationsAssociatedToGroup_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q3:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAssociatedApplicationRequest">
+    <wsdl:part name="parameters" element="tns:UpdateAssociatedApplicationRequest" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceGroupManagement_UpdateAssociatedApplication_OutputMessage" />
+  <wsdl:message name="IDeviceGroupManagement_UpdateAssociatedApplication_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q4:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="CreateDeviceGroupCommandRequest">
+    <wsdl:part name="parameters" element="tns:CreateDeviceGroupCommandRequest" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceGroupManagement_CreateDeviceGroupCommand_OutputMessage" />
+  <wsdl:message name="IDeviceGroupManagement_CreateDeviceGroupCommand_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q5:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="CreateGroupRequest">
+    <wsdl:part name="parameters" element="tns:CreateGroupRequest" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceGroupManagement_CreateGroup_OutputMessage" />
+  <wsdl:message name="IDeviceGroupManagement_CreateGroup_GroupAlreadyExistsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://Server.FaultContracts/2007/01" name="detail" element="q6:GroupAlreadyExists" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceGroupManagement_CreateGroup_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q7:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="GetChildGroupsRequest">
+    <wsdl:part name="parameters" element="tns:GetChildGroupsRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetChildGroupsResponse">
+    <wsdl:part name="parameters" element="tns:GetChildGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceGroupManagement_GetChildGroups_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q8:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceGroupManagement_GetChildGroups_GroupDoesNotExistFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://Server.FaultContracts/2007/01" name="detail" element="q9:GroupDoesNotExist" />
+  </wsdl:message>
+  <wsdl:message name="RemoveGroupRequest">
+    <wsdl:part name="parameters" element="tns:RemoveGroupRequest" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceGroupManagement_RemoveGroup_OutputMessage" />
+  <wsdl:message name="IDeviceGroupManagement_RemoveGroup_GroupDoesNotExistFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://Server.FaultContracts/2007/01" name="detail" element="q10:GroupDoesNotExist" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceGroupManagement_RemoveGroup_CannotDeleteGroupFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://Server.FaultContracts/2007/01" name="detail" element="q11:GroupAlreadyExists" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceGroupManagement_RemoveGroup_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q12:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="UpdateGroupRequest">
+    <wsdl:part name="parameters" element="tns:UpdateGroupRequest" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceGroupManagement_UpdateGroup_OutputMessage" />
+  <wsdl:message name="IDeviceGroupManagement_UpdateGroup_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q13:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IDeviceGroupManagement_UpdateGroup_GroupDoesNotExistFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://Server.FaultContracts/2007/01" name="detail" element="q14:GroupDoesNotExist" />
+  </wsdl:message>
+  <wsdl:portType name="IDeviceGroupManagement">
+    <wsdl:operation name="UpdateInstallForGroupApplication">
+      <wsdl:input wsaw:Action="UpdateInstallForGroupApplication" name="UpdateInstallForGroupApplicationRequest" message="tns:UpdateInstallForGroupApplicationRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/UpdateInstallForGroupApplicationResponse" message="tns:IDeviceGroupManagement_UpdateInstallForGroupApplication_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/UpdateInstallForGroupApplicationDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IDeviceGroupManagement_UpdateInstallForGroupApplication_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AssociateApplications">
+      <wsdl:input wsaw:Action="AssociateApplications" name="AssociateApplicationsRequest" message="tns:AssociateApplicationsRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/AssociateApplicationsResponse" message="tns:IDeviceGroupManagement_AssociateApplications_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/AssociateApplicationsDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IDeviceGroupManagement_AssociateApplications_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationsAssociatedToGroup">
+      <wsdl:input wsaw:Action="GetAssociatedApplications" name="GetApplicationsAssociatedToGroupRequest" message="tns:GetApplicationsAssociatedToGroupRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/GetApplicationsAssociatedToGroupResponse" name="GetApplicationsAssociatedToGroupResponse" message="tns:GetApplicationsAssociatedToGroupResponse" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/GetApplicationsAssociatedToGroupDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IDeviceGroupManagement_GetApplicationsAssociatedToGroup_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssociatedApplication">
+      <wsdl:input wsaw:Action="UpdateAssociatedApplication" name="UpdateAssociatedApplicationRequest" message="tns:UpdateAssociatedApplicationRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/UpdateAssociatedApplicationResponse" message="tns:IDeviceGroupManagement_UpdateAssociatedApplication_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/UpdateAssociatedApplicationDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IDeviceGroupManagement_UpdateAssociatedApplication_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDeviceGroupCommand">
+      <wsdl:input wsaw:Action="CreateDeviceGroupCommand" name="CreateDeviceGroupCommandRequest" message="tns:CreateDeviceGroupCommandRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/CreateDeviceGroupCommandResponse" message="tns:IDeviceGroupManagement_CreateDeviceGroupCommand_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/CreateDeviceGroupCommandDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IDeviceGroupManagement_CreateDeviceGroupCommand_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateGroup">
+      <wsdl:input wsaw:Action="CreateGroup" name="CreateGroupRequest" message="tns:CreateGroupRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/CreateGroupResponse" message="tns:IDeviceGroupManagement_CreateGroup_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/CreateGroupGroupAlreadyExistsFault" name="GroupAlreadyExistsFault" message="tns:IDeviceGroupManagement_CreateGroup_GroupAlreadyExistsFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/CreateGroupDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IDeviceGroupManagement_CreateGroup_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetChildGroups">
+      <wsdl:input wsaw:Action="GetChildGroups" name="GetChildGroupsRequest" message="tns:GetChildGroupsRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/GetChildGroupsResponse" name="GetChildGroupsResponse" message="tns:GetChildGroupsResponse" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/GetChildGroupsDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IDeviceGroupManagement_GetChildGroups_DefaultFaultContractFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/GetChildGroupsGroupDoesNotExistFault" name="GroupDoesNotExistFault" message="tns:IDeviceGroupManagement_GetChildGroups_GroupDoesNotExistFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveGroup">
+      <wsdl:input wsaw:Action="RemoveGroup" name="RemoveGroupRequest" message="tns:RemoveGroupRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/RemoveGroupResponse" message="tns:IDeviceGroupManagement_RemoveGroup_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/RemoveGroupGroupDoesNotExistFault" name="GroupDoesNotExistFault" message="tns:IDeviceGroupManagement_RemoveGroup_GroupDoesNotExistFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/RemoveGroupCannotDeleteGroupFault" name="CannotDeleteGroupFault" message="tns:IDeviceGroupManagement_RemoveGroup_CannotDeleteGroupFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/RemoveGroupDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IDeviceGroupManagement_RemoveGroup_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGroup">
+      <wsdl:input wsaw:Action="UpdateGroup" name="UpdateGroupRequest" message="tns:UpdateGroupRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/UpdateGroupResponse" message="tns:IDeviceGroupManagement_UpdateGroup_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/UpdateGroupDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IDeviceGroupManagement_UpdateGroup_DefaultFaultContractFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ServiceContracts/2007/01/IDeviceGroupManagement/UpdateGroupGroupDoesNotExistFault" name="GroupDoesNotExistFault" message="tns:IDeviceGroupManagement_UpdateGroup_GroupDoesNotExistFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="DeviceGroupManagement">
+    <wsdl:port name="WSHttpBinding_IDeviceGroupManagement" binding="i0:WSHttpBinding_IDeviceGroupManagement">
+      <soap12:address location="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

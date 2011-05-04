@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:i0="http://tempuri.org/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="PackageDesign" targetNamespace="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01/Imports">
+      <xsd:import schemaLocation="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc?xsd=xsd0" namespace="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01" />
+      <xsd:import schemaLocation="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc?xsd=xsd3" namespace="http://FaultContracts/Default/DefaultFaultContract" />
+      <xsd:import schemaLocation="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc?xsd=xsd2" namespace="http://BlueDot.Mnow.Server.PackageDesign.DataContracts/2007/01" />
+      <xsd:import schemaLocation="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc?xsd=xsd4" namespace="http://BlueDotSolutions.MobileFramework.Server.PackageDesign.DataContracts/2007/01" />
+      <xsd:import schemaLocation="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPackageDesign_GetPackageList_InputMessage" />
+  <wsdl:message name="GetPackageListResponse">
+    <wsdl:part name="parameters" element="tns:GetPackageListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPackageDesign_GetPackageList_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q1:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="GetPackageContentRequest">
+    <wsdl:part name="parameters" element="tns:GetPackageContentRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetPackageContentResponse">
+    <wsdl:part name="parameters" element="tns:GetPackageContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPackageDesign_GetPackageContent_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q2:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="AddPackageRequest">
+    <wsdl:part name="parameters" element="tns:AddPackageRequest" />
+  </wsdl:message>
+  <wsdl:message name="AddPackageResponse">
+    <wsdl:part name="parameters" element="tns:AddPackageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPackageDesign_AddPackage_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q3:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IPackageDesign_GetDeviceHandlers_InputMessage" />
+  <wsdl:message name="GetDeviceHandlerModulesResponse">
+    <wsdl:part name="parameters" element="tns:GetDeviceHandlerModulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPackageDesign_GetDeviceHandlers_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q4:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="RemovePackageRequest">
+    <wsdl:part name="parameters" element="tns:RemovePackageRequest" />
+  </wsdl:message>
+  <wsdl:message name="IPackageDesign_RemovePackage_OutputMessage" />
+  <wsdl:message name="IPackageDesign_RemovePackage_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q5:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="AddDependenciesRequest">
+    <wsdl:part name="parameters" element="tns:AddDependenciesRequest" />
+  </wsdl:message>
+  <wsdl:message name="IPackageDesign_AddDependencies_OutputMessage" />
+  <wsdl:message name="IPackageDesign_AddDependencies_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q6:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="GetDependenciesRequest">
+    <wsdl:part name="parameters" element="tns:GetDependenciesRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetDependenciesResponse">
+    <wsdl:part name="parameters" element="tns:GetDependenciesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPackageDesign_GetDependencies_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q7:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="RemoveDependencyRequest">
+    <wsdl:part name="parameters" element="tns:RemoveDependencyRequest" />
+  </wsdl:message>
+  <wsdl:message name="IPackageDesign_RemoveDependency_OutputMessage" />
+  <wsdl:message name="IPackageDesign_RemoveDependency_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q8:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="RegisterDeviceHandlerRequest">
+    <wsdl:part name="parameters" element="tns:RegisterDeviceHandlerRequest" />
+  </wsdl:message>
+  <wsdl:message name="RegisterDeviceHandlerResponse">
+    <wsdl:part name="parameters" element="tns:RegisterDeviceHandlerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPackageDesign_RegisterDeviceHandler_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q9:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:portType name="IPackageDesign">
+    <wsdl:operation name="GetPackageList">
+      <wsdl:input wsaw:Action="GetPackageList" message="tns:IPackageDesign_GetPackageList_InputMessage" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01/IPackageDesign/GetPackageListResponse" name="GetPackageListResponse" message="tns:GetPackageListResponse" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01/IPackageDesign/GetPackageListDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IPackageDesign_GetPackageList_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPackageContent">
+      <wsdl:input wsaw:Action="GetPackageContent" name="GetPackageContentRequest" message="tns:GetPackageContentRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01/IPackageDesign/GetPackageContentResponse" name="GetPackageContentResponse" message="tns:GetPackageContentResponse" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01/IPackageDesign/GetPackageContentDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IPackageDesign_GetPackageContent_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPackage">
+      <wsdl:input wsaw:Action="AddPackage" name="AddPackageRequest" message="tns:AddPackageRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01/IPackageDesign/AddPackageResponse" name="AddPackageResponse" message="tns:AddPackageResponse" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01/IPackageDesign/AddPackageDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IPackageDesign_AddPackage_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceHandlers">
+      <wsdl:input wsaw:Action="GetDeviceHandlers" message="tns:IPackageDesign_GetDeviceHandlers_InputMessage" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01/IPackageDesign/GetDeviceHandlersResponse" name="GetDeviceHandlerModulesResponse" message="tns:GetDeviceHandlerModulesResponse" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01/IPackageDesign/GetDeviceHandlersDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IPackageDesign_GetDeviceHandlers_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemovePackage">
+      <wsdl:input wsaw:Action="RemovePackage" name="RemovePackageRequest" message="tns:RemovePackageRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01/IPackageDesign/RemovePackageResponse" message="tns:IPackageDesign_RemovePackage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01/IPackageDesign/RemovePackageDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IPackageDesign_RemovePackage_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDependencies">
+      <wsdl:input wsaw:Action="AddDependencies" name="AddDependenciesRequest" message="tns:AddDependenciesRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01/IPackageDesign/AddDependenciesResponse" message="tns:IPackageDesign_AddDependencies_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01/IPackageDesign/AddDependenciesDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IPackageDesign_AddDependencies_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDependencies">
+      <wsdl:input wsaw:Action="GetDependencies" name="GetDependenciesRequest" message="tns:GetDependenciesRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01/IPackageDesign/GetDependenciesResponse" name="GetDependenciesResponse" message="tns:GetDependenciesResponse" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01/IPackageDesign/GetDependenciesDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IPackageDesign_GetDependencies_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveDependency">
+      <wsdl:input wsaw:Action="RemoveDependency" name="RemoveDependencyRequest" message="tns:RemoveDependencyRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01/IPackageDesign/RemoveDependencyResponse" message="tns:IPackageDesign_RemoveDependency_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01/IPackageDesign/RemoveDependencyDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IPackageDesign_RemoveDependency_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RegisterDeviceHandler">
+      <wsdl:input wsaw:Action="RegisterDeviceHandler" name="RegisterDeviceHandlerRequest" message="tns:RegisterDeviceHandlerRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01/IPackageDesign/RegisterDeviceHandlerResponse" name="RegisterDeviceHandlerResponse" message="tns:RegisterDeviceHandlerResponse" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01/IPackageDesign/RegisterDeviceHandlerDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IPackageDesign_RegisterDeviceHandler_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="PackageDesign">
+    <wsdl:port name="WSHttpBinding_IPackageDesign" binding="i0:WSHttpBinding_IPackageDesign">
+      <soap12:address location="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

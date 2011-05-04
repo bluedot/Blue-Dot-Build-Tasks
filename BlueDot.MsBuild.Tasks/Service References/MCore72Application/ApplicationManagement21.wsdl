@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/Imports">
+      <xsd:import schemaLocation="http://tcdev5.bluedotsolutions.com/MNowCommunicationService/ApplicationManagement.svc?xsd=xsd0" namespace="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01" />
+      <xsd:import schemaLocation="http://tcdev5.bluedotsolutions.com/MNowCommunicationService/ApplicationManagement.svc?xsd=xsd3" namespace="http://FaultContracts/Default/DefaultFaultContract" />
+      <xsd:import schemaLocation="http://tcdev5.bluedotsolutions.com/MNowCommunicationService/ApplicationManagement.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://tcdev5.bluedotsolutions.com/MNowCommunicationService/ApplicationManagement.svc?xsd=xsd2" namespace="http://BlueDot.Mnow.Server.DataContracts/2007/01" />
+      <xsd:import schemaLocation="http://tcdev5.bluedotsolutions.com/MNowCommunicationService/ApplicationManagement.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/Message" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateApplicationRequest">
+    <wsdl:part name="parameters" element="tns:CreateApplicationRequest" />
+  </wsdl:message>
+  <wsdl:message name="CreateApplicationResponse">
+    <wsdl:part name="parameters" element="tns:CreateApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationManagement_CreateApplication_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q1:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="CreateApplicationFolderRequest">
+    <wsdl:part name="parameters" element="tns:CreateApplicationFolderRequest" />
+  </wsdl:message>
+  <wsdl:message name="CreateApplicationFolderResponse">
+    <wsdl:part name="parameters" element="tns:CreateApplicationFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationManagement_CreateApplicationFolder_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q2:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="CreateInstallRequest">
+    <wsdl:part name="parameters" element="tns:CreateInstallRequest" />
+  </wsdl:message>
+  <wsdl:message name="CreateInstallRequest_Headers">
+    <wsdl:part name="NewInstall" element="tns:NewInstall" />
+  </wsdl:message>
+  <wsdl:message name="CreateInstallResponse">
+    <wsdl:part name="parameters" element="tns:CreateInstallResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationManagement_CreateInstall_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q3:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="CreateApplicationSmartFolderRequest">
+    <wsdl:part name="parameters" element="tns:CreateApplicationSmartFolderRequest" />
+  </wsdl:message>
+  <wsdl:message name="CreateApplicationSmartFolderResponse">
+    <wsdl:part name="parameters" element="tns:CreateApplicationSmartFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationManagement_CreateSmartApplicationFolder_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q4:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationManagement_GetAllApplicationSmartFolders_InputMessage" />
+  <wsdl:message name="GetAllApplicationSmartFoldersResponse">
+    <wsdl:part name="parameters" element="tns:GetAllApplicationSmartFoldersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationManagement_GetAllApplicationSmartFolders_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q5:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationRequest">
+    <wsdl:part name="parameters" element="tns:GetApplicationRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationResponse">
+    <wsdl:part name="parameters" element="tns:GetApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationManagement_GetApplication_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q6:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationFoldersRequest">
+    <wsdl:part name="parameters" element="tns:GetApplicationFoldersRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationFoldersResponse">
+    <wsdl:part name="parameters" element="tns:GetApplicationFoldersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationManagement_GetApplicationFolders_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q7:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationsRequest">
+    <wsdl:part name="parameters" element="tns:GetApplicationsRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetApplicationsResponse">
+    <wsdl:part name="parameters" element="tns:GetApplicationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationManagement_GetApplications_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q8:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="GetInstallsForApplicationRequest">
+    <wsdl:part name="parameters" element="tns:GetInstallsForApplicationRequest" />
+  </wsdl:message>
+  <wsdl:message name="GetInstallsForApplicationResponse">
+    <wsdl:part name="parameters" element="tns:GetInstallsForApplicationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationManagement_GetInstallsForApplication_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q9:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="RemoveApplicationRequest">
+    <wsdl:part name="parameters" element="tns:RemoveApplicationRequest" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationManagement_RemoveApplication_OutputMessage" />
+  <wsdl:message name="IApplicationManagement_RemoveApplication_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q10:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="RemoveApplicationFolderRequest">
+    <wsdl:part name="parameters" element="tns:RemoveApplicationFolderRequest" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationManagement_RemoveApplicationFolder_OutputMessage" />
+  <wsdl:message name="IApplicationManagement_RemoveApplicationFolder_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q11:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="RemoveInstallRequest">
+    <wsdl:part name="parameters" element="tns:RemoveInstallRequest" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationManagement_RemoveInstall_OutputMessage" />
+  <wsdl:message name="IApplicationManagement_RemoveInstall_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q12:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="RemoveApplicationSmartFolderRequest">
+    <wsdl:part name="parameters" element="tns:RemoveApplicationSmartFolderRequest" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationManagement_RemoveSmartApplicationFolder_OutputMessage" />
+  <wsdl:message name="IApplicationManagement_RemoveSmartApplicationFolder_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q13:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="SetActiveInstallRequest">
+    <wsdl:part name="parameters" element="tns:SetActiveInstallRequest" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationManagement_SetActiveInstall_OutputMessage" />
+  <wsdl:message name="IApplicationManagement_SetActiveInstall_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q14:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="UpdateApplicationRequest">
+    <wsdl:part name="parameters" element="tns:UpdateApplicationRequest" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationManagement_UpdateApplication_OutputMessage" />
+  <wsdl:message name="IApplicationManagement_UpdateApplication_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q15:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="UpdateApplicationFolderRequest">
+    <wsdl:part name="parameters" element="tns:UpdateApplicationFolderRequest" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationManagement_UpdateApplicationFolder_OutputMessage" />
+  <wsdl:message name="IApplicationManagement_UpdateApplicationFolder_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q16:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceOriginatedInstallRequest">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceOriginatedInstallRequest" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceOriginatedInstallRequest_Headers">
+    <wsdl:part name="UpdateInstall" element="tns:UpdateInstall" />
+  </wsdl:message>
+  <wsdl:message name="UpdateDeviceOriginatedInstallResponse">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceOriginatedInstallResponse" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationManagement_UpdateDeviceOriginatedInstall_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q17:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="UpdateInstallRequest">
+    <wsdl:part name="parameters" element="tns:UpdateInstallRequest" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationManagement_UpdateInstall_OutputMessage" />
+  <wsdl:message name="IApplicationManagement_UpdateInstall_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q18:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="UpdateApplicationSmartFolderRequest">
+    <wsdl:part name="parameters" element="tns:UpdateApplicationSmartFolderRequest" />
+  </wsdl:message>
+  <wsdl:message name="IApplicationManagement_UpdateSmartApplicationFolder_OutputMessage" />
+  <wsdl:message name="IApplicationManagement_UpdateSmartApplicationFolder_DefaultFaultContractFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://FaultContracts/Default/DefaultFaultContract" name="detail" element="q19:DefaultFaultContract" />
+  </wsdl:message>
+  <wsdl:portType name="IApplicationManagement">
+    <wsdl:operation name="CreateApplication">
+      <wsdl:input wsaw:Action="CreateApplication" name="CreateApplicationRequest" message="tns:CreateApplicationRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/CreateApplicationResponse" name="CreateApplicationResponse" message="tns:CreateApplicationResponse" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/CreateApplicationDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IApplicationManagement_CreateApplication_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateApplicationFolder">
+      <wsdl:input wsaw:Action="CreateApplicationFolder" name="CreateApplicationFolderRequest" message="tns:CreateApplicationFolderRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/CreateApplicationFolderResponse" name="CreateApplicationFolderResponse" message="tns:CreateApplicationFolderResponse" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/CreateApplicationFolderDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IApplicationManagement_CreateApplicationFolder_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateInstall">
+      <wsdl:input wsaw:Action="CreateInstall" name="CreateInstallRequest" message="tns:CreateInstallRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/CreateInstallResponse" name="CreateInstallResponse" message="tns:CreateInstallResponse" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/CreateInstallDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IApplicationManagement_CreateInstall_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSmartApplicationFolder">
+      <wsdl:input wsaw:Action="CreateSmartApplicationFolder" name="CreateApplicationSmartFolderRequest" message="tns:CreateApplicationSmartFolderRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/CreateSmartApplicationFolderResponse" name="CreateApplicationSmartFolderResponse" message="tns:CreateApplicationSmartFolderResponse" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/CreateSmartApplicationFolderDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IApplicationManagement_CreateSmartApplicationFolder_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllApplicationSmartFolders">
+      <wsdl:input wsaw:Action="GetAllApplicationSmartFolders" message="tns:IApplicationManagement_GetAllApplicationSmartFolders_InputMessage" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/GetAllApplicationSmartFoldersResponse" name="GetAllApplicationSmartFoldersResponse" message="tns:GetAllApplicationSmartFoldersResponse" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/GetAllApplicationSmartFoldersDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IApplicationManagement_GetAllApplicationSmartFolders_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplication">
+      <wsdl:input wsaw:Action="GetApplication" name="GetApplicationRequest" message="tns:GetApplicationRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/GetApplicationResponse" name="GetApplicationResponse" message="tns:GetApplicationResponse" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/GetApplicationDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IApplicationManagement_GetApplication_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationFolders">
+      <wsdl:input wsaw:Action="GetApplicationFolders" name="GetApplicationFoldersRequest" message="tns:GetApplicationFoldersRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/GetApplicationFoldersResponse" name="GetApplicationFoldersResponse" message="tns:GetApplicationFoldersResponse" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/GetApplicationFoldersDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IApplicationManagement_GetApplicationFolders_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplications">
+      <wsdl:input wsaw:Action="GetApplications" name="GetApplicationsRequest" message="tns:GetApplicationsRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/GetApplicationsResponse" name="GetApplicationsResponse" message="tns:GetApplicationsResponse" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/GetApplicationsDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IApplicationManagement_GetApplications_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstallsForApplication">
+      <wsdl:input wsaw:Action="GetInstallsForApplication" name="GetInstallsForApplicationRequest" message="tns:GetInstallsForApplicationRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/GetInstallsForApplicationResponse" name="GetInstallsForApplicationResponse" message="tns:GetInstallsForApplicationResponse" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/GetInstallsForApplicationDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IApplicationManagement_GetInstallsForApplication_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveApplication">
+      <wsdl:input wsaw:Action="RemoveApplication" name="RemoveApplicationRequest" message="tns:RemoveApplicationRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/RemoveApplicationResponse" message="tns:IApplicationManagement_RemoveApplication_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/RemoveApplicationDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IApplicationManagement_RemoveApplication_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveApplicationFolder">
+      <wsdl:input wsaw:Action="RemoveApplicationFolder" name="RemoveApplicationFolderRequest" message="tns:RemoveApplicationFolderRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/RemoveApplicationFolderResponse" message="tns:IApplicationManagement_RemoveApplicationFolder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/RemoveApplicationFolderDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IApplicationManagement_RemoveApplicationFolder_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveInstall">
+      <wsdl:input wsaw:Action="RemoveInstall" name="RemoveInstallRequest" message="tns:RemoveInstallRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/RemoveInstallResponse" message="tns:IApplicationManagement_RemoveInstall_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/RemoveInstallDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IApplicationManagement_RemoveInstall_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSmartApplicationFolder">
+      <wsdl:input wsaw:Action="RemoveSmartApplicationFolder" name="RemoveApplicationSmartFolderRequest" message="tns:RemoveApplicationSmartFolderRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/RemoveSmartApplicationFolderResponse" message="tns:IApplicationManagement_RemoveSmartApplicationFolder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/RemoveSmartApplicationFolderDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IApplicationManagement_RemoveSmartApplicationFolder_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetActiveInstall">
+      <wsdl:input wsaw:Action="SetActiveInstall" name="SetActiveInstallRequest" message="tns:SetActiveInstallRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/SetActiveInstallResponse" message="tns:IApplicationManagement_SetActiveInstall_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/SetActiveInstallDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IApplicationManagement_SetActiveInstall_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplication">
+      <wsdl:input wsaw:Action="UpdateApplication" name="UpdateApplicationRequest" message="tns:UpdateApplicationRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/UpdateApplicationResponse" message="tns:IApplicationManagement_UpdateApplication_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/UpdateApplicationDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IApplicationManagement_UpdateApplication_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicationFolder">
+      <wsdl:input wsaw:Action="UpdateApplicationFolder" name="UpdateApplicationFolderRequest" message="tns:UpdateApplicationFolderRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/UpdateApplicationFolderResponse" message="tns:IApplicationManagement_UpdateApplicationFolder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/UpdateApplicationFolderDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IApplicationManagement_UpdateApplicationFolder_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceOriginatedInstall">
+      <wsdl:input wsaw:Action="UpdateDeviceOriginatedInstall" name="UpdateDeviceOriginatedInstallRequest" message="tns:UpdateDeviceOriginatedInstallRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/UpdateDeviceOriginatedInstallResponse" name="UpdateDeviceOriginatedInstallResponse" message="tns:UpdateDeviceOriginatedInstallResponse" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/UpdateDeviceOriginatedInstallDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IApplicationManagement_UpdateDeviceOriginatedInstall_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInstall">
+      <wsdl:input wsaw:Action="UpdateInstall" name="UpdateInstallRequest" message="tns:UpdateInstallRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/UpdateInstallResponse" message="tns:IApplicationManagement_UpdateInstall_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/UpdateInstallDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IApplicationManagement_UpdateInstall_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSmartApplicationFolder">
+      <wsdl:input wsaw:Action="UpdateSmartApplicationFolder" name="UpdateApplicationSmartFolderRequest" message="tns:UpdateApplicationSmartFolderRequest" />
+      <wsdl:output wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/UpdateSmartApplicationFolderResponse" message="tns:IApplicationManagement_UpdateSmartApplicationFolder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01/IApplicationManagement/UpdateSmartApplicationFolderDefaultFaultContractFault" name="DefaultFaultContractFault" message="tns:IApplicationManagement_UpdateSmartApplicationFolder_DefaultFaultContractFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

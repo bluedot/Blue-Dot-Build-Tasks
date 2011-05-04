@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4f55a2fe-fc6b-49e3-b4fc-b93d750035bf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://bdsprjapptst/mnowframework/PackageDesign.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PackageDesign.wsdl" MetadataType="Wsdl" ID="fd3f9888-947c-4d41-8d26-bc5a7bd81895" SourceId="1" SourceUrl="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc?wsdl" />
+    <MetadataFile FileName="PackageDesign.xsd" MetadataType="Schema" ID="79492774-7a84-4964-88dc-e1dffc7779fb" SourceId="1" SourceUrl="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc?xsd=xsd0" />
+    <MetadataFile FileName="PackageDesign1.xsd" MetadataType="Schema" ID="20143bd5-3d48-4e9b-a17a-dc4269b6c38b" SourceId="1" SourceUrl="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc?xsd=xsd1" />
+    <MetadataFile FileName="PackageDesign2.xsd" MetadataType="Schema" ID="75797ea1-e494-46a9-ad04-3d796e065e10" SourceId="1" SourceUrl="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc?xsd=xsd2" />
+    <MetadataFile FileName="PackageDesign3.xsd" MetadataType="Schema" ID="2ffa1ef5-597a-4a2b-9ba5-7d60a350b0a0" SourceId="1" SourceUrl="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc?xsd=xsd3" />
+    <MetadataFile FileName="PackageDesign4.xsd" MetadataType="Schema" ID="5eb86a8c-460d-4157-a2d2-3ec9d963bc25" SourceId="1" SourceUrl="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc?xsd=xsd4" />
+    <MetadataFile FileName="PackageDesign5.xsd" MetadataType="Schema" ID="1672dbda-bcbc-4594-9af7-96d5220736f7" SourceId="1" SourceUrl="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc?xsd=xsd5" />
+    <MetadataFile FileName="PackageDesign.disco" MetadataType="Disco" ID="a94d99f9-4c0b-4e75-83f3-8f61edc16a97" SourceId="1" SourceUrl="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc?disco" />
+    <MetadataFile FileName="PackageDesign1.wsdl" MetadataType="Wsdl" ID="933c20f0-928f-4abb-8eae-7b98a5ae9c4c" SourceId="1" SourceUrl="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

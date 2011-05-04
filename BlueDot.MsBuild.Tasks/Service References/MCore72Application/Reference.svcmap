@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e4221ea1-250f-405d-a923-362eab1bee70" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/mnowcommunicationservice/applicationmanagement.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ApplicationManagement5.xsd" MetadataType="Schema" ID="d095f557-5b06-43eb-a9dd-d4e6059e2026" SourceId="1" SourceUrl="http://tcdev5.bluedotsolutions.com/MNowCommunicationService/ApplicationManagement.svc?xsd=xsd1" />
+    <MetadataFile FileName="ApplicationManagement51.xsd" MetadataType="Schema" ID="bb1bc4ac-dc0f-4746-9452-c52d83bc696d" SourceId="1" SourceUrl="http://tcdev5.bluedotsolutions.com/MNowCommunicationService/ApplicationManagement.svc?xsd=xsd4" />
+    <MetadataFile FileName="ApplicationManagement52.xsd" MetadataType="Schema" ID="4262881e-82a6-42c3-aa2d-7c7a7353e3a2" SourceId="1" SourceUrl="http://tcdev5.bluedotsolutions.com/MNowCommunicationService/ApplicationManagement.svc?xsd=xsd3" />
+    <MetadataFile FileName="ApplicationManagement2.wsdl" MetadataType="Wsdl" ID="9cd0e4f4-ac87-495a-a430-d73573f9a224" SourceId="1" SourceUrl="http://tcdev5.bluedotsolutions.com/MNowCommunicationService/ApplicationManagement.svc?wsdl" />
+    <MetadataFile FileName="ApplicationManagement21.wsdl" MetadataType="Wsdl" ID="89db744f-e999-4fe2-b6d5-90b564fef58e" SourceId="1" SourceUrl="http://tcdev5.bluedotsolutions.com/MNowCommunicationService/ApplicationManagement.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ApplicationManagement1.disco" MetadataType="Disco" ID="a1462c0b-9fa5-441c-976c-4e7b2fedf995" SourceId="1" SourceUrl="http://tcdev5.bluedotsolutions.com/MNowCommunicationService/ApplicationManagement.svc?disco" />
+    <MetadataFile FileName="ApplicationManagement53.xsd" MetadataType="Schema" ID="b76782db-f14a-491c-a4bd-927f9532be7d" SourceId="1" SourceUrl="http://tcdev5.bluedotsolutions.com/MNowCommunicationService/ApplicationManagement.svc?xsd=xsd0" />
+    <MetadataFile FileName="ApplicationManagement54.xsd" MetadataType="Schema" ID="6e157726-bad5-411f-898a-92696f9e7a9a" SourceId="1" SourceUrl="http://tcdev5.bluedotsolutions.com/MNowCommunicationService/ApplicationManagement.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

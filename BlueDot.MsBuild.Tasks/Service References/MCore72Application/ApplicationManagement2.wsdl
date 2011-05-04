@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:i0="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="ApplicationManagement" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="Basic_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01" location="http://tcdev5.bluedotsolutions.com/MNowCommunicationService/ApplicationManagement.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="Basic" type="i0:IApplicationManagement">
+    <wsp:PolicyReference URI="#Basic_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateApplication">
+      <soap12:operation soapAction="CreateApplication" style="document" />
+      <wsdl:input name="CreateApplicationRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CreateApplicationResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateApplicationFolder">
+      <soap12:operation soapAction="CreateApplicationFolder" style="document" />
+      <wsdl:input name="CreateApplicationFolderRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CreateApplicationFolderResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateInstall">
+      <soap12:operation soapAction="CreateInstall" style="document" />
+      <wsdl:input name="CreateInstallRequest">
+        <soap12:header message="i0:CreateInstallRequest_Headers" part="NewInstall" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CreateInstallResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSmartApplicationFolder">
+      <soap12:operation soapAction="CreateSmartApplicationFolder" style="document" />
+      <wsdl:input name="CreateApplicationSmartFolderRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CreateApplicationSmartFolderResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllApplicationSmartFolders">
+      <soap12:operation soapAction="GetAllApplicationSmartFolders" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAllApplicationSmartFoldersResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplication">
+      <soap12:operation soapAction="GetApplication" style="document" />
+      <wsdl:input name="GetApplicationRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetApplicationResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationFolders">
+      <soap12:operation soapAction="GetApplicationFolders" style="document" />
+      <wsdl:input name="GetApplicationFoldersRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetApplicationFoldersResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplications">
+      <soap12:operation soapAction="GetApplications" style="document" />
+      <wsdl:input name="GetApplicationsRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetApplicationsResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstallsForApplication">
+      <soap12:operation soapAction="GetInstallsForApplication" style="document" />
+      <wsdl:input name="GetInstallsForApplicationRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetInstallsForApplicationResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveApplication">
+      <soap12:operation soapAction="RemoveApplication" style="document" />
+      <wsdl:input name="RemoveApplicationRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveApplicationFolder">
+      <soap12:operation soapAction="RemoveApplicationFolder" style="document" />
+      <wsdl:input name="RemoveApplicationFolderRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveInstall">
+      <soap12:operation soapAction="RemoveInstall" style="document" />
+      <wsdl:input name="RemoveInstallRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveSmartApplicationFolder">
+      <soap12:operation soapAction="RemoveSmartApplicationFolder" style="document" />
+      <wsdl:input name="RemoveApplicationSmartFolderRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetActiveInstall">
+      <soap12:operation soapAction="SetActiveInstall" style="document" />
+      <wsdl:input name="SetActiveInstallRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplication">
+      <soap12:operation soapAction="UpdateApplication" style="document" />
+      <wsdl:input name="UpdateApplicationRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicationFolder">
+      <soap12:operation soapAction="UpdateApplicationFolder" style="document" />
+      <wsdl:input name="UpdateApplicationFolderRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceOriginatedInstall">
+      <soap12:operation soapAction="UpdateDeviceOriginatedInstall" style="document" />
+      <wsdl:input name="UpdateDeviceOriginatedInstallRequest">
+        <soap12:header message="i0:UpdateDeviceOriginatedInstallRequest_Headers" part="UpdateInstall" use="literal" />
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UpdateDeviceOriginatedInstallResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateInstall">
+      <soap12:operation soapAction="UpdateInstall" style="document" />
+      <wsdl:input name="UpdateInstallRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSmartApplicationFolder">
+      <soap12:operation soapAction="UpdateSmartApplicationFolder" style="document" />
+      <wsdl:input name="UpdateApplicationSmartFolderRequest">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="DefaultFaultContractFault">
+        <soap12:fault use="literal" name="DefaultFaultContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ApplicationManagement">
+    <wsdl:port name="Basic" binding="tns:Basic">
+      <soap12:address location="http://tcdev5.bluedotsolutions.com/MNowCommunicationService/ApplicationManagement.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://tcdev5.bluedotsolutions.com/MNowCommunicationService/ApplicationManagement.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01" elementFormDefault="qualified" targetNamespace="http://BlueDot.Mnow.Server.ApplicationManagement.ServiceContracts/2007/01" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://tcdev5.bluedotsolutions.com/MNowCommunicationService/ApplicationManagement.svc?xsd=xsd2" namespace="http://BlueDot.Mnow.Server.DataContracts/2007/01" />
+  <xs:import schemaLocation="http://tcdev5.bluedotsolutions.com/MNowCommunicationService/ApplicationManagement.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/Message" />
+  <xs:element name="CreateApplicationRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="Application" nillable="true" type="q1:NewApplication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateApplicationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="Application" nillable="true" type="q2:Application" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateApplicationFolderRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="Folder" nillable="true" type="q3:NewApplicationFolder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateApplicationFolderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="Folder" nillable="true" type="q4:ApplicationFolder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateInstallRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/Message" name="InstallStream" type="q5:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element xmlns:q6="http://BlueDot.Mnow.Server.DataContracts/2007/01" name="NewInstall" nillable="true" type="q6:NewInstall" />
+  <xs:element name="CreateInstallResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="InstallHeader" nillable="true" type="q7:InstallHeader" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateApplicationSmartFolderRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="Folder" nillable="true" type="q8:NewApplicationSmartFolder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateApplicationSmartFolderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="Folder" nillable="true" type="q9:ApplicationSmartFolder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllApplicationSmartFoldersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="ApplicationSmartFolders" nillable="true" type="q10:ArrayOfApplicationSmartFolder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ApplicationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="Application" nillable="true" type="q11:Application" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationFoldersRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ParentApplicationFolderId" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationFoldersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="ApplicationFolders" nillable="true" type="q12:ArrayOfApplicationFolder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ApplicationFolderId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="Applications" nillable="true" type="q13:ArrayOfApplication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstallsForApplicationRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ApplicationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstallsForApplicationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="Installs" nillable="true" type="q14:ArrayOfInstallHeader" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveApplicationRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ApplicationId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveApplicationFolderRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ApplicationFolderId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveInstallRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InstallId" type="xs:int" />
+        <xs:element minOccurs="0" name="LastUpdatedByUserName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveApplicationSmartFolderRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ApplicationSmartFolderId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetActiveInstallRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InstallId" type="xs:int" />
+        <xs:element minOccurs="0" name="LastUpdatedByUserName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateApplicationRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="Application" nillable="true" type="q15:Application" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateApplicationFolderRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="Folder" nillable="true" type="q16:ApplicationFolder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDeviceOriginatedInstallRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.microsoft.com/Message" name="InstallStream" type="q17:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element xmlns:q18="http://BlueDot.Mnow.Server.DataContracts/2007/01" name="UpdateInstall" nillable="true" type="q18:UpdateDeviceOriginatedInstall" />
+  <xs:element name="UpdateDeviceOriginatedInstallResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="InstallHeader" nillable="true" type="q19:InstallHeader" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateInstallRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="ExistingInstall" nillable="true" type="q20:UpdateInstall" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateApplicationSmartFolderRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="Folder" nillable="true" type="q21:ApplicationSmartFolder" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

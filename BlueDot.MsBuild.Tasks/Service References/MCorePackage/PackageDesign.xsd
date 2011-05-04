@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01" elementFormDefault="qualified" targetNamespace="http://BlueDot.Mnow.Server.PackageDesign.ServiceContracts/2007/01" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc?xsd=xsd2" namespace="http://BlueDot.Mnow.Server.PackageDesign.DataContracts/2007/01" />
+  <xs:import schemaLocation="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc?xsd=xsd4" namespace="http://BlueDotSolutions.MobileFramework.Server.PackageDesign.DataContracts/2007/01" />
+  <xs:import schemaLocation="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/PackageDesign.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="GetPackageListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://BlueDot.Mnow.Server.PackageDesign.DataContracts/2007/01" minOccurs="0" name="PackageList" nillable="true" type="q1:ArrayOfDeploymentPackageMetadata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPackageContentRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PackageId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPackageContentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Content" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPackageRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://BlueDot.Mnow.Server.PackageDesign.DataContracts/2007/01" minOccurs="0" name="PackageToAdd" nillable="true" type="q2:DeploymentPackageAddition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPackageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PackageId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeviceHandlerModulesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://BlueDotSolutions.MobileFramework.Server.PackageDesign.DataContracts/2007/01" minOccurs="0" name="DeviceHandlerList" nillable="true" type="q3:ArrayOfDeviceHandlerModule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemovePackageRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PackageId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDependenciesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeploymentPackageId" type="xs:int" />
+        <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DependencyList" nillable="true" type="q4:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDependenciesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeploymentPackageId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDependenciesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://BlueDot.Mnow.Server.PackageDesign.DataContracts/2007/01" minOccurs="0" name="DependencyList" nillable="true" type="q5:ArrayOfDeploymentPackageMetadata" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveDependencyRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PackageId" type="xs:int" />
+        <xs:element minOccurs="0" name="DependentPackageId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterDeviceHandlerRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://BlueDotSolutions.MobileFramework.Server.PackageDesign.DataContracts/2007/01" minOccurs="0" name="NewHandlerModule" nillable="true" type="q6:DeviceHandlerModuleAddition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RegisterDeviceHandlerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeviceHandlerId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

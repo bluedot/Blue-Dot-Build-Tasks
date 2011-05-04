@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://BlueDot.Mnow.Server.PackageDesign.DataContracts/2007/01" elementFormDefault="qualified" targetNamespace="http://BlueDot.Mnow.Server.PackageDesign.DataContracts/2007/01" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfDeploymentPackageMetadata">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DeploymentPackageMetadata" nillable="true" type="tns:DeploymentPackageMetadata" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDeploymentPackageMetadata" nillable="true" type="tns:ArrayOfDeploymentPackageMetadata" />
+  <xs:complexType name="DeploymentPackageMetadata">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DeploymentPackageBase">
+        <xs:sequence>
+          <xs:element name="Description" nillable="true" type="xs:string" />
+          <xs:element name="TypeId" type="xs:int" />
+          <xs:element name="Type" nillable="true" type="xs:string" />
+          <xs:element name="CreatedWhen" type="xs:dateTime" />
+          <xs:element name="CreatedBy" nillable="true" type="xs:string" />
+          <xs:element name="LastUpdatedWhen" type="xs:dateTime" />
+          <xs:element name="LastUpdatedBy" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeploymentPackageMetadata" nillable="true" type="tns:DeploymentPackageMetadata" />
+  <xs:complexType name="DeploymentPackageBase">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:int" />
+      <xs:element name="Name" nillable="true" type="xs:string" />
+      <xs:element name="Version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeploymentPackageBase" nillable="true" type="tns:DeploymentPackageBase" />
+  <xs:complexType name="DeploymentPackageAddition">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DeploymentPackageBase">
+        <xs:sequence>
+          <xs:element name="HandlerId" type="xs:int" />
+          <xs:element name="CreatedWhen" type="xs:dateTime" />
+          <xs:element name="CreatedBy" nillable="true" type="xs:string" />
+          <xs:element name="Content" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeploymentPackageAddition" nillable="true" type="tns:DeploymentPackageAddition" />
+</xs:schema>

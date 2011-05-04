@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://BlueDot.Mnow.Server.ServiceContracts/2007/01" elementFormDefault="qualified" targetNamespace="http://BlueDot.Mnow.Server.ServiceContracts/2007/01" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/DeviceGroupManagement.svc?xsd=xsd2" namespace="http://BlueDot.Mnow.Server.Runtime.DataContracts/2007/01" />
+  <xs:import schemaLocation="http://bdsprjapptst.bluedotsolutions.com/mNowFramework/DeviceGroupManagement.svc?xsd=xsd4" namespace="http://BlueDot.Mnow.Server.DataContracts/2007/01" />
+  <xs:element name="AssociateDeploymentPackagesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://BlueDot.Mnow.Server.Runtime.DataContracts/2007/01" minOccurs="0" name="DeploymentPackageList" nillable="true" type="q1:ArrayOfDeviceGroupAssociationAddition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateGroupRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="NewGroup" nillable="true" type="q2:DeviceGroupAddition" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableDeploymentPackagesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeviceGroupId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableDeploymentPackagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="DeploymentPackageList" nillable="true" type="q3:ArrayOfDeploymentPackage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChildGroupsRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ParentGroupId" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChildGroupsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="ChildGroups" nillable="true" type="q4:ArrayOfDeviceGroup" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeploymentPackagesRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeviceGroupId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeploymentPackagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://BlueDot.Mnow.Server.Runtime.DataContracts/2007/01" minOccurs="0" name="DeploymentPackageList" nillable="true" type="q5:ArrayOfDeviceGroupDeploymentPackage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveGroupRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GroupId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAssociationRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://BlueDot.Mnow.Server.Runtime.DataContracts/2007/01" minOccurs="0" name="Update" nillable="true" type="q6:DeviceGroupAssociationUpdate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateGroupRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://BlueDot.Mnow.Server.DataContracts/2007/01" minOccurs="0" name="ExistingGroup" nillable="true" type="q7:DeviceGroupUpdate" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

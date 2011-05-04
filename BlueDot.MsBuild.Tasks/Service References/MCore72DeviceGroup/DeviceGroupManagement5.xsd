@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://BlueDot.Mnow.Server.DataContracts/2007/01" elementFormDefault="qualified" targetNamespace="http://BlueDot.Mnow.Server.DataContracts/2007/01" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://tcdev2.bluedotsolutions.com/MNowCommunicationService/DeviceGroupManagement.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/BlueDot.Server.Client.Wcf.DataContracts" />
+  <xs:complexType name="DeviceGroupInstallUpdate">
+    <xs:sequence>
+      <xs:element name="ApplicationId" type="xs:int" />
+      <xs:element minOccurs="0" name="DeployToDeviceDate" nillable="true" type="xs:dateTime" />
+      <xs:element name="DeviceGroupId" type="xs:int" />
+      <xs:element name="InstallId" type="xs:int" />
+      <xs:element minOccurs="0" name="InstallOnDeviceDate" nillable="true" type="xs:dateTime" />
+      <xs:element name="IsActiveInstall" type="xs:boolean" />
+      <xs:element name="LastUpdatedByUserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeviceGroupInstallUpdate" nillable="true" type="tns:DeviceGroupInstallUpdate" />
+  <xs:complexType name="ArrayOfDeviceGroupApplication">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DeviceGroupApplication" nillable="true" type="tns:DeviceGroupApplication" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDeviceGroupApplication" nillable="true" type="tns:ArrayOfDeviceGroupApplication" />
+  <xs:complexType name="DeviceGroupApplication">
+    <xs:sequence>
+      <xs:element name="ApplicationFormalName" nillable="true" type="xs:string" />
+      <xs:element name="ApplicationId" type="xs:int" />
+      <xs:element name="ApplicationTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedByUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedWhen" type="xs:dateTime" />
+      <xs:element name="DeviceGroupId" type="xs:int" />
+      <xs:element minOccurs="0" name="DeviceGroupInstalls" nillable="true" type="tns:ArrayOfDeviceGroupInstall" />
+      <xs:element name="LastUpdatedByUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastUpdatedWhen" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RemovedFromDeviceWhen" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeviceGroupApplication" nillable="true" type="tns:DeviceGroupApplication" />
+  <xs:complexType name="ArrayOfDeviceGroupInstall">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DeviceGroupInstall" nillable="true" type="tns:DeviceGroupInstall" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDeviceGroupInstall" nillable="true" type="tns:ArrayOfDeviceGroupInstall" />
+  <xs:complexType name="DeviceGroupInstall">
+    <xs:sequence>
+      <xs:element name="CreatedByUserName" nillable="true" type="xs:string" />
+      <xs:element name="CreatedWhen" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeployToDeviceDate" nillable="true" type="xs:dateTime" />
+      <xs:element name="DeviceGroupId" type="xs:int" />
+      <xs:element name="InstallFileName" nillable="true" type="xs:string" />
+      <xs:element name="InstallId" type="xs:int" />
+      <xs:element minOccurs="0" name="InstallOnDeviceDate" nillable="true" type="xs:dateTime" />
+      <xs:element name="IsActiveInstall" type="xs:boolean" />
+      <xs:element name="LastUpdatedByUserName" nillable="true" type="xs:string" />
+      <xs:element name="LastUpdatedWhen" type="xs:dateTime" />
+      <xs:element name="Version" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeviceGroupInstall" nillable="true" type="tns:DeviceGroupInstall" />
+  <xs:complexType name="DeviceGroupApplicationUpdate">
+    <xs:sequence>
+      <xs:element name="ApplicationId" type="xs:int" />
+      <xs:element name="DeviceGroupId" type="xs:int" />
+      <xs:element name="LastUpdatedByUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RemovedFromDeviceWhen" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeviceGroupApplicationUpdate" nillable="true" type="tns:DeviceGroupApplicationUpdate" />
+  <xs:complexType name="DeviceGroupCommandAddition">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CommandText" nillable="true" type="xs:string" />
+      <xs:element name="CreatedByUserName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/BlueDot.Server.Client.Wcf.DataContracts" name="Type" type="q1:DeviceCommandTypeEnum" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeviceGroupCommandAddition" nillable="true" type="tns:DeviceGroupCommandAddition" />
+  <xs:complexType name="DeviceGroupAddition">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DeviceGroupBase">
+        <xs:sequence>
+          <xs:element name="CreatedByUser" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeviceGroupAddition" nillable="true" type="tns:DeviceGroupAddition" />
+  <xs:complexType name="DeviceGroupBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeviceSettings" nillable="true" type="xs:string" />
+      <xs:element name="ParentId" nillable="true" type="xs:int" />
+      <xs:element name="Name" nillable="true" type="xs:string" />
+      <xs:element name="Notes" nillable="true" type="xs:string" />
+      <xs:element name="TimeZoneId" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeviceGroupBase" nillable="true" type="tns:DeviceGroupBase" />
+  <xs:complexType name="ArrayOfDeviceGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DeviceGroup" nillable="true" type="tns:DeviceGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDeviceGroup" nillable="true" type="tns:ArrayOfDeviceGroup" />
+  <xs:complexType name="DeviceGroup">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DeviceGroupBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApplicationsToActOn" type="xs:int" />
+          <xs:element name="Id" type="xs:int" />
+          <xs:element name="LastUpdatedByUser" nillable="true" type="xs:string" />
+          <xs:element name="CreatedWhen" type="xs:dateTime" />
+          <xs:element name="LastUpdatedWhen" type="xs:dateTime" />
+          <xs:element name="CreatedByUser" nillable="true" type="xs:string" />
+          <xs:element name="RowVersion" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeviceGroup" nillable="true" type="tns:DeviceGroup" />
+  <xs:complexType name="DeviceGroupUpdate">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DeviceGroupBase">
+        <xs:sequence>
+          <xs:element name="Id" type="xs:int" />
+          <xs:element name="LastUpdatedByUser" nillable="true" type="xs:string" />
+          <xs:element name="RowVersion" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DeviceGroupUpdate" nillable="true" type="tns:DeviceGroupUpdate" />
+</xs:schema>
